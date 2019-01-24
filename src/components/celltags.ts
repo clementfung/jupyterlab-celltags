@@ -1,5 +1,16 @@
 import { Cell } from '@jupyterlab/cells';
 
+export function make_private(cell: Cell) {
+  // Just like tagging, but makes the cells in question private.
+  let isPrivate = cell.model.metadata.get('private');
+
+  if (!isPrivate) {
+    cell.model.metadata.set('private', true);
+  }
+
+  return true;
+}
+
 export function write_tag(cell: Cell, name: string, add: boolean) {
   /* If add = true, check if tags are undefined; if so, initialize the array.
     Otherwise, check if the tag already exists; if so, return false.

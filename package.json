@@ -1,5 +1,5 @@
 {
-  "name": "@jupyterlab/celltags",
+  "name": "@jupyterlab/privatetags",
   "version": "0.1.4",
   "description": "Extension for adding descriptive tags to notebook cells (Beta)",
   "keywords": [
@@ -7,9 +7,9 @@
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/jupyterlab/jupyterlab-celltags.git",
+  "homepage": "https://github.com/jupyterlab/jupyterlab-privatetags.git",
   "bugs": {
-    "url": "https://github.com/jupyterlab/jupyterlab-celltags.git/issues"
+    "url": "https://github.com/jupyterlab/jupyterlab-privatetags.git/issues"
   },
   "license": "BSD-3-Clause",
   "author": "Zuoyuan Huang, Markelle Kelly, Rose Chang",
@@ -22,7 +22,7 @@
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jupyterlab/jupyterlab-celltags.git"
+    "url": "https://github.com/jupyterlab/jupyterlab-privatetags.git"
   },
   "scripts": {
     "build": "tsc",
