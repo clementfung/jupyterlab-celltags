@@ -160,7 +160,7 @@ export class MakePrivateComponent extends React.Component<
     this.state = { plusIconShouldHide: false, addingNewTag: false };
   }
 
-  addTagOnClick(event: React.MouseEvent<HTMLInputElement>) {
+  addTagOnClick(event: React.MouseEvent<any>) {
     (this.props.widget as PrivacyWidget).makeActiveCellPrivate();
   }
 
@@ -188,17 +188,31 @@ export class MakePrivateComponent extends React.Component<
   }*/
 
   render() {
-    var inputBox = (
-      <div>
+    var privateButton = (
+      <div
+        className={TagStyleClasses.blankAddInputStyleClass}
+        onClick={event => this.addTagOnClick(event)}
+      >
+        <span className={TagStyleClasses.addTagSpanStyleClass}>
+          Make Private
+        </span>
+        <img
+          src={require('../../static/add_icon.svg')}
+          className={TagStyleClasses.inputIconStyleClass}
+          onClick={event => this.addTagOnClick(event)}
+        />
+      </div>
+
+      /*<div>
         <input
           className={TagStyleClasses.defaultAddInputStyleClass}
           onClick={event => this.addTagOnClick(event)}
           autoFocus
         />
-      </div>
+      </div>*/
     );
     return (
-      <div className={TagStyleClasses.addTagDefaultStyleClass}>{inputBox}</div>
+      <div className={TagStyleClasses.addTagStyleClass}>{privateButton}</div>
     );
   }
 }

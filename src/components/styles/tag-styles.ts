@@ -34,6 +34,7 @@ export namespace TagStyleClasses {
   );
 
   export const addTagStyleClass = style(SharedStyles.tagStyleProperties, {
+    //backgroundColor: '#dd7777',
     backgroundColor: 'var(--jp-layout-color1)',
     border: '1px solid var(--jp-layout-color4)',
     paddingTop: '4px',
